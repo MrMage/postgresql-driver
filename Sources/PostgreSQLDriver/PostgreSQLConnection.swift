@@ -3,7 +3,7 @@ import PostgreSQL
 
 public final class Connection: Fluent.Connection {
     public let postgresqlConnection: PostgreSQL.Connection
-    public var queryLogger: QueryLogger?
+    public weak var queryLogger: QueryLogger?
     public var isClosed: Bool {
         return !postgresqlConnection.isConnected
     }
