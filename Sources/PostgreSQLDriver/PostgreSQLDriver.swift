@@ -22,11 +22,11 @@ public final class Driver: Fluent.Driver {
     // ex: snake_case vs. camelCase.
     public let keyNamingConvention: KeyNamingConvention
 
-    // The master MySQL Database for read/write
-    public let master: PostgreSQL.Database
+    // The master PostgreSQL Database for read/write
+    public var master: PostgreSQL.Database!
 
     // The read replicas for read only
-    public let readReplicas: [PostgreSQL.Database]
+    public var readReplicas: [PostgreSQL.Database]
 
     // Stores query logger
     public var queryLogger: QueryLogger?
